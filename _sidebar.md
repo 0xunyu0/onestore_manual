@@ -1,0 +1,17 @@
+- **[应用场景]**
+  * [**单商户应用**](changelog.md)
+  * [**集团公司内务**](changelog.md)
+- **[功能模块]**
+  - [**用户模块**](changelog.md)
+  - [**商品模块**](changelog.md)
+  - [**订单模块**](changelog.md)
+  - [**支付模块**](changelog.md)
+  - [**卡券模块**](changelog.md)
+  - [**管理模块**](changelog.md)
+- **[应用扩展]**
+  - [**基础配置**](changelog.md)
+  - [**高级设置**](changelog.md)
+  - [**后台权限**](changelog.md)
+  - [**数据备份**](changelog.md)
+  - [**系统安全**](changelog.md)
+- [**[更新日志]**](changelog.md)

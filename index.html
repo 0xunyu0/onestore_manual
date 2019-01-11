@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+ *
+ * ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+ * ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+ * ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+ * ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+ * ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+ * ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+ * ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+ * ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+ * ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+ * ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+ * ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+ * 就这样默默地看着你，一句话也不说。
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>One Store</title>
+  <link rel="icon" href="_media/favicon.ico">
+  <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
+  <!--IE 8浏览器的页面渲染方式-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
+  <meta name="description" content="A magical documentation generator.">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" title="vue" >
+  <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script>
+  <style>
+    nav.app-nav li ul {
+      min-width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">加载中 ...</div>
+  <script>
+    window.$docsify = {
+      
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: false,
+      noEmoji: false,
+      mergeNavbar: true,
+      maxLevel: 6,
+      subMaxLevel: 3,
+      name: 'One Store',
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = '' + vm.route.file
+            }
+            var editHtml = '[](' + url + ')\n'
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              + '<a href="https://iolab.top" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2018-2019 T-Cloud Data Studio</a>'
+          })
+        },
+        
+      ]
+      
+    }
+  </script>
+
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js">
+  //Medium's 风格的图片缩放插件. 基于 medium-zoom。
+  </script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  
+</body>
+
+</html>
